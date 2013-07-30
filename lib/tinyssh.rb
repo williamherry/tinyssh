@@ -1,5 +1,8 @@
 require "tinyssh/version"
 
 module Tinyssh
-  # Your code goes here...
+  class Shell
+    def initiallize
+    end
+  end
 end
