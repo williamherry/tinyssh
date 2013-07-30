@@ -1,8 +1,25 @@
 require "tinyssh/version"
 
 module Tinyssh
+
   class Shell
-    def initiallize
+
+    def initialize(cmd)
+      @cmd = cmd
     end
+
+    def cmd
+      @cmd
+    end
+
+    def cmd=(cmd)
+      @cmd = cmd
+    end
+
+    def run
+      @cmd.nil? ? "" : `#{@cmd}`
+    end
+
   end
+
 end
